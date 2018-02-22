@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Titolo</span>
+    <span class="example-spacer"></span>
+    <a (click)="logout()" *ngIf="userIsLogged">
+      <mat-icon class="example-icon">exit_to_app</mat-icon>
+    </a>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+<div fxLayoutAlign="center">
+  <mat-card class="example-card" >
+    <mat-card-content >
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput name="username" placeholder="Username" [(ngModel)]="username">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput name="password" placeholder="Password" type="password" [(ngModel)]="password">
+        </mat-form-field>
+        <div class="button-row">
+          <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
